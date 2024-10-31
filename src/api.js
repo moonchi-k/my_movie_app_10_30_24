@@ -25,6 +25,7 @@ const options = {
 const url = (urlName) => {
   // 괄호 안에 urlName이 들어갈거다
   return baseUrl + `${urlName}?language=ko-kr`;
+  //   이런 형식으로 return 될 거다
 };
 
 // url이 매번 바뀌니까 함수로 만들어줌.
@@ -38,3 +39,9 @@ export const nowPlaying = () =>
 
 export const popular = () =>
   fetch(url("movie/popular"), options).then((res) => res.json());
+
+export const topRated = () =>
+  fetch(url("movie/top_rated"), options).then((res) => res.json());
+
+export const upComing = () =>
+  fetch(url("movie/upcoming"), options).then((res) => res.json());
