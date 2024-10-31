@@ -15,4 +15,5 @@
 -[x] npm i react-router-dom -[x] npm i styled-components -[x] npm i styled-reset
 -[] swiper -[x] font-awesome -[x] npm i react-hook-form
 -[] helmet-async
--[] react icons
+-[] react icons -[] npm i node-fetch
+노드 페치는 2.7 버전으로 사용
