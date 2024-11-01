@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Sfooter = styled.footer`
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 `;
 
