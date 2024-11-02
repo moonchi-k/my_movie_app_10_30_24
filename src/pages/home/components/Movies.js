@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { mainStyle } from "../../../GlobalStyled";
+import { W500 } from "../../../constant/imgUrl";
 
 const Container = styled.section`
   padding: 0 ${mainStyle.moPadding};
@@ -35,12 +37,12 @@ const params = {
   },
 };
 
-const Movies = () => {
+const Movies = ({ data, title }) => {
   return (
     <Container>
-      <Title>현재 상영중</Title>
+      <Title>{title}</Title>
       <Swiper {...params}>
-        {nowData.map((movie) => (
+        {data.map((movie) => (
           <SwiperSlide>
             <Con>
               <Link to={`/detail/${movie.id}`}>

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { mainStyle } from "../../GlobalStyled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import Movies from "./components/Movies";
 
 const Home = () => {
   const [nowData, setNowData] = useState();
@@ -59,7 +60,9 @@ const Home = () => {
             <div>
               <Banner Data={nowData} />
 
-              <Movies></Movies>
+              <Movies data={nowData} title={"현재상영중"}></Movies>
+              <Movies data={popData} title={"인기상영작"}></Movies>
+              <Movies data={topData} title={"상위랭킹작"}></Movies>
             </div>
           )}
         </>
