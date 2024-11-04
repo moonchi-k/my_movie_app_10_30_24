@@ -4,6 +4,7 @@ const Sfooter = styled.footer`
   width: 100%;
   position: fixed;
   bottom: 0;
+  color: #fff;
 `;
 
 const Footer = () => {
