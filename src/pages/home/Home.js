@@ -9,6 +9,8 @@ import { mainStyle } from "../../GlobalStyled";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Movies from "./components/Movies";
+import { Helmet } from "react-helmet-async";
+import PageTitle from "../../components/PageTitle";
 
 const Home = () => {
   const [nowData, setNowData] = useState();
@@ -56,6 +58,7 @@ const Home = () => {
         <Loading />
       ) : (
         <>
+          <PageTitle title="Home"></PageTitle>
           {nowData && (
             <div>
               <Banner Data={nowData} />

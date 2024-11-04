@@ -4,6 +4,8 @@ import { movieDetail } from "../../api";
 import styled from "styled-components";
 import { mainStyle } from "../../GlobalStyled";
 import { ORIGINAL_URL } from "../../constant/imgUrl";
+import { Helmet } from "react-helmet-async";
+import PageTitle from "../../components/PageTitle";
 
 const Container = styled.div`
   padding: 160px ${mainStyle.pcPadding};
@@ -63,6 +65,8 @@ const Detail = () => {
     })();
   }, [id]);
 
+  // id값을 배열에 넣었다는건 id값이 변경될 때마다 안에있는 함수값을 실행하라는 뜻.
+
   movieDetail();
 
   return (
@@ -70,24 +74,27 @@ const Detail = () => {
       {isLoading ? (
         "loading"
       ) : (
-        <Container>
-          <Bg
-            style={{
-              background: `URL(${ORIGINAL_URL}${Data.poster_path}) no-repeat center / cover`,
-            }}
-          />
-          <TitleWrap>
-            <h3>{Data.title}</h3>
-            <span>{Math.round(Data.vote_average)}점</span> •{" "}
-            <span>{Data.runtime}분</span> • <span>{Data.release_date}</span>
-            <ul>
-              {Data.genres.map((genre) => (
-                <li key={genre.id}>{genre.name}</li>
-              ))}
-            </ul>
-            <p>{Data.overview}</p>
-          </TitleWrap>
-        </Container>
+        <>
+          <PageTitle title={Data.title}></PageTitle>
+          <Container>
+            <Bg
+              style={{
+                background: `URL(${ORIGINAL_URL}${Data.poster_path}) no-repeat center / cover`,
+              }}
+            />
+            <TitleWrap>
+              <h3>{Data.title}</h3>
+              <span>{Math.round(Data.vote_average)}점</span> •{" "}
+              <span>{Data.runtime}분</span> • <span>{Data.release_date}</span>
+              <ul>
+                {Data.genres.map((genre) => (
+                  <li key={genre.id}>{genre.name}</li>
+                ))}
+              </ul>
+              <p>{Data.overview}</p>
+            </TitleWrap>
+          </Container>
+        </>
       )}
     </>
   );
