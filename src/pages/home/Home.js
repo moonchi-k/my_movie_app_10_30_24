@@ -2,15 +2,12 @@ import { useEffect, useState } from "react";
 import { nowPlaying, popular, topRated, upComing } from "../../api";
 import Loading from "../../components/Loading";
 import Banner from "./components/Banner";
-import styled from "styled-components";
-import { W500 } from "../../constant/imgUrl";
-import { Link } from "react-router-dom";
-import { mainStyle } from "../../GlobalStyled";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import Movies from "./components/Movies";
-import { Helmet } from "react-helmet-async";
+
 import PageTitle from "../../components/PageTitle";
+import useScrollTop from "../../lib/useScrollTop";
 
 const Home = () => {
   const [nowData, setNowData] = useState();
@@ -20,6 +17,7 @@ const Home = () => {
   const [topData, setTopData] = useState();
   const [upData, setupData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  useScrollTop();
 
   useEffect(() => {
     // 렌더링될 때 딱 한 번만 실행될 수 있게끔 해줌, 무한적으로 불러오는 것을 막아줌

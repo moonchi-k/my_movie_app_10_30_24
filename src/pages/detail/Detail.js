@@ -4,9 +4,10 @@ import { movieDetail } from "../../api";
 import styled from "styled-components";
 
 import { ORIGINAL_URL, noImg } from "../../constant/imgUrl";
-import { Helmet } from "react-helmet-async";
+
 import PageTitle from "../../components/PageTitle";
 import Wrapper from "../../components/Wrapper";
+import useScrollTop from "../../lib/useScrollTop";
 
 const Container = styled.div`
   display: flex;
@@ -51,6 +52,7 @@ const Detail = () => {
   const { id } = useParams();
   const [Data, setData] = useState();
   const [isLoading, setIsLoading] = useState(true);
+  useScrollTop();
 
   console.log(id);
 
