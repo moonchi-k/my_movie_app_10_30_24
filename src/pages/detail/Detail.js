@@ -2,20 +2,19 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { movieDetail } from "../../api";
 import styled from "styled-components";
-import { mainStyle } from "../../GlobalStyled";
-import { ORIGINAL_URL } from "../../constant/imgUrl";
+
+import { ORIGINAL_URL, noImg } from "../../constant/imgUrl";
 import { Helmet } from "react-helmet-async";
 import PageTitle from "../../components/PageTitle";
+import Wrapper from "../../components/Wrapper";
 
 const Container = styled.div`
-  padding: 160px ${mainStyle.pcPadding};
   display: flex;
   justify-content: space-between;
 `;
 const Bg = styled.div`
   width: 45%;
   height: 800px;
-  background-color: lightgray;
 `;
 const TitleWrap = styled.div`
   width: 50%;
@@ -76,24 +75,28 @@ const Detail = () => {
       ) : (
         <>
           <PageTitle title={Data.title}></PageTitle>
-          <Container>
-            <Bg
-              style={{
-                background: `URL(${ORIGINAL_URL}${Data.poster_path}) no-repeat center / cover`,
-              }}
-            />
-            <TitleWrap>
-              <h3>{Data.title}</h3>
-              <span>{Math.round(Data.vote_average)}점</span> •{" "}
-              <span>{Data.runtime}분</span> • <span>{Data.release_date}</span>
-              <ul>
-                {Data.genres.map((genre) => (
-                  <li key={genre.id}>{genre.name}</li>
-                ))}
-              </ul>
-              <p>{Data.overview}</p>
-            </TitleWrap>
-          </Container>
+          <Wrapper>
+            <Container>
+              <Bg
+                style={{
+                  background: `url(${
+                    Data.poster_path ? ORIGINAL_URL + Data.poster_path : noImg
+                  }) no-repeat center / cover`,
+                }}
+              />
+              <TitleWrap>
+                <h3>{Data.title}</h3>
+                <span>{Math.round(Data.vote_average)}점</span> •{" "}
+                <span>{Data.runtime}분</span> • <span>{Data.release_date}</span>
+                <ul>
+                  {Data.genres.map((genre) => (
+                    <li key={genre.id}>{genre.name}</li>
+                  ))}
+                </ul>
+                <p>{Data.overview}</p>
+              </TitleWrap>
+            </Container>
+          </Wrapper>
         </>
       )}
     </>

@@ -50,3 +50,11 @@ export const movieDetail = (id) => {
   console.log(id);
   return fetch(url(`movie/${id}`), options).then((res) => res.json());
 };
+
+export const searchMovie = (keyword) => {
+  console.log(keyword);
+  const searchUrl =
+    baseUrl +
+    `search/movie?query=${keyword}&include_adult=false&language=ko-kr`;
+  return fetch(searchUrl, options).then((res) => res.json());
+};

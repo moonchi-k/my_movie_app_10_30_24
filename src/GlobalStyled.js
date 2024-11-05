@@ -22,5 +22,6 @@ body {
     font-family: "Noto Sans KR", serif;
     letter-spacing: -1px;
     background-color: #1d1d1d;
+    color: white;
 }
 `;
