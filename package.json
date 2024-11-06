@@ -34,7 +34,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https:moonchi-k.github.io/my_movie_app_10_30_24/#/",
+  "homepage": "https//:moonchi-k.github.io/my_movie_app_10_30_24/#/",
   "eslintConfig": {
     "extends": [
       "react-app",
