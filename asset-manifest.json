@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/moonchi-k.github.io/movie_app/static/css/main.3c70d7db.css",
+    "main.js": "/moonchi-k.github.io/movie_app/static/js/main.5735f62d.js",
+    "index.html": "/moonchi-k.github.io/movie_app/index.html",
+    "main.3c70d7db.css.map": "/moonchi-k.github.io/movie_app/static/css/main.3c70d7db.css.map",
+    "main.5735f62d.js.map": "/moonchi-k.github.io/movie_app/static/js/main.5735f62d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c70d7db.css",
+    "static/js/main.5735f62d.js"
+  ]
+}
