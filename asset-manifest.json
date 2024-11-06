@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/moonchi-k.github.io/movie_app_10_30_24/static/css/main.3c70d7db.css",
-    "main.js": "/moonchi-k.github.io/movie_app_10_30_24/static/js/main.04d89833.js",
-    "index.html": "/moonchi-k.github.io/movie_app_10_30_24/index.html",
-    "main.3c70d7db.css.map": "/moonchi-k.github.io/movie_app_10_30_24/static/css/main.3c70d7db.css.map",
-    "main.04d89833.js.map": "/moonchi-k.github.io/movie_app_10_30_24/static/js/main.04d89833.js.map"
+    "main.css": "/moonchi-k.github.io/my_movie_app_10_30_24/static/css/main.3c70d7db.css",
+    "main.js": "/moonchi-k.github.io/my_movie_app_10_30_24/static/js/main.67cc38db.js",
+    "index.html": "/moonchi-k.github.io/my_movie_app_10_30_24/index.html",
+    "main.3c70d7db.css.map": "/moonchi-k.github.io/my_movie_app_10_30_24/static/css/main.3c70d7db.css.map",
+    "main.67cc38db.js.map": "/moonchi-k.github.io/my_movie_app_10_30_24/static/js/main.67cc38db.js.map"
   },
   "entrypoints": [
     "static/css/main.3c70d7db.css",
-    "static/js/main.04d89833.js"
+    "static/js/main.67cc38db.js"
   ]
 }
